@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #1e1e1e;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+/* CONTROLS */
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+select,
+button {
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+
+button {
+  background: #444;
+  color: white;
+}
+
+button:hover {
+  background: #666;
+}
+
+/* BOARD GRID */
+#board {
+  display: grid;
+  gap: 2px;
+  justify-content: center;
+  margin: 20px auto;
+  width: max-content;
+}
+
+/* CELLS */
+.cell {
+  width: 30px;
+  height: 30px;
+  background: #333;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  user-select: none;
+  transition: background 0.1s ease;
+}
+
+.cell:hover {
+  background: #444;
+}
+
+.cell.revealed {
+  background: #888;
+  cursor: default;
+}
+
+.cell.mine {
+  background: red;
+}
+
+/* TEXT INFO */
+span {
+  font-size: 14px;
+}
+.tabs {
+  margin-bottom: 15px;
+}

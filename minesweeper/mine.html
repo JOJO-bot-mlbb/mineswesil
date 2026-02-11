@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minesweeper PvP</title>
+  <link rel="stylesheet" href="mine.css">
+</head>
+<body>
+<div class="tabs">
+  <button id="gameTabBtn">🎮 Game</button>
+  <button id="achievementsTabBtn">🏆 Achievements</button>
+  <button id="statsTabBtn">📊 Stats</button>
+</div>
+  <h1>💣 Minesweeper PvP 💣</h1>
+
+  <div class="controls">
+
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+      <option value="extreme">Extreme</option>
+      <option value="hacker">Hacker</option>
+      <option value="champion">Champion</option>
+      <option value="sisil">Sisil</option>
+    </select>
+
+    <button id="pvpBtn">Toggle PvP</button>
+    <button id="restartBtn">Restart</button>
+
+    <span>💣 Mines: <span id="mineCount">0</span></span>
+    <span>🚩 Flags: <span id="flagsLeft">0</span></span>
+    <span>⏱ Time: <span id="timer">0</span></span>
+    <span>🏆 Score: You <span id="playerScore">0</span> | Sisil <span id="sisilScore">0</span></span>
+
+  </div>
+
+  <div id="board"></div>
+<!-- RESULT MODAL -->
+<div id="resultModal" class="modal hidden">
+  <div class="modal-content">
+    <h2 id="resultTitle"></h2>
+    <button id="closeModal">OK</button>
+  </div>
+</div>
+
+<!-- ACHIEVEMENTS PANEL -->
+<div id="achievementsPanel" class="hidden panel">
+  <h2>🏆 Achievements</h2>
+  <ul id="achievementsList">
+    <li>Win 1 Game</li>
+    <li>Win on Hard</li>
+    <li>Beat Sisil</li>
+    <li>Win without using flags</li>
+  </ul>
+</div>
+<!-- STATS PANEL -->
+<div id="statsPanel" class="hidden panel">
+  <h2>📊 Your Stats</h2>
+  <p>Total Wins: <span id="totalWins">0</span></p>
+  <p>Total Losses: <span id="totalLosses">0</span></p>
+  <p>Games Played: <span id="gamesPlayed">0</span></p>
+</div>
+  <script src="mine.js"></script>
+</body>
+</html>
